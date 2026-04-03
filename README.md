@@ -25,6 +25,10 @@ This repository packages Footright LLC's go-to-market and delivery starter kit f
 
 ## Structure
 
+- `connectors_strategy.md`: connector planning approach for client environments
+- `integration_readiness_checklist.md`: pre-build readiness checklist for integrations
+- `minimum_viable_integration_model.md`: lean deployment model for the first production workflow
+- `agent_workflow_design.md`: agent-stage workflow design from intake through action
 - `offer/`: core service offer, pricing, and packaging
 - `demo/`: architecture, assessment templates, and platform-agnostic demo narratives
 - `sales/`: outreach, discovery, and closing assets for direct client selling
@@ -41,6 +45,8 @@ This repository packages Footright LLC's go-to-market and delivery starter kit f
 5. Adapt the sample playbooks to the customer's SIEM, SOAR, EDR, and email security stack.
 6. Reuse the triage agent prompt as a base prompt for OpenAI-driven alert classification and recommended actions.
 7. Start each client engagement with [environment_assessment.md](C:\Users\moses\ai-soc-automation-agency\demo\environment_assessment.md) and [tool_inventory_template.md](C:\Users\moses\ai-soc-automation-agency\demo\tool_inventory_template.md).
+8. Use [connectors_strategy.md](C:\Users\moses\ai-soc-automation-agency\connectors_strategy.md), [integration_readiness_checklist.md](C:\Users\moses\ai-soc-automation-agency\integration_readiness_checklist.md), and [minimum_viable_integration_model.md](C:\Users\moses\ai-soc-automation-agency\minimum_viable_integration_model.md) to scope the first client deployment.
+9. Use [agent_workflow_design.md](C:\Users\moses\ai-soc-automation-agency\agent_workflow_design.md) when designing how alerts move from ingestion to triage, routing, and approval.
 
 ## Hosting
 
