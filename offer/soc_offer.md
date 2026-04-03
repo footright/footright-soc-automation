@@ -25,11 +25,11 @@ We help security teams reduce alert fatigue, accelerate response time, and autom
 - Severity scoring
 - Context enrichment (user, asset, IP intel)
 
-### 2. Playbook Automation (Sentinel / Swimlane)
+### 2. Playbook Automation (Client Stack Compatible)
 
-- Build and optimize SOAR playbooks
-- Automate repetitive workflows
-- Integrate SIEM, EDR, IAM, and threat intelligence feeds
+- Build and optimize playbooks using the client's existing tools
+- Automate repetitive workflows without requiring a platform replacement
+- Integrate SIEM, SOAR, EDR, IAM, email security, and threat intelligence feeds
 
 ### 3. MTTR Reduction System
 
@@ -43,20 +43,40 @@ We help security teams reduce alert fatigue, accelerate response time, and autom
 - Detection improvements
 - Reporting dashboards (MTTR, MTTD, alert reduction)
 
+## Delivery Approach
+
+### 1. Environment Assessment
+
+- Inventory the client's SOC tooling and workflows
+- Identify available APIs, webhooks, and automation options
+- Find high-volume alert types and process bottlenecks
+
+### 2. Tool-Agnostic AI Layer
+
+- Normalize alerts from any supported source into a common schema
+- Apply AI triage, enrichment, severity scoring, and decision support
+- Route outputs into the client's existing tools and workflows
+
+### 3. Incremental Automation
+
+- Start with the highest-value workflow first
+- Use existing SOAR if available
+- If no SOAR exists, deliver value through ticketing, chat, email, scripts, and analyst queues
+
 ## Packaging
 
 ### SMB Launch
 
 - 1 to 2 core alert workflows
 - Basic triage logic and severity assignment
-- One primary stack integration
+- One primary stack integration based on the client's current environment
 - Monthly reporting and tuning
 - Best for teams with limited internal security bandwidth
 
 ### Growth
 
 - 2 to 4 production workflows
-- SIEM plus EDR or email security integrations
+- SIEM plus EDR or email security integrations based on the client's current environment
 - Guided response actions and escalation routing
 - Weekly optimization and reporting
 - Best for mid-market teams building repeatable security operations
@@ -64,7 +84,7 @@ We help security teams reduce alert fatigue, accelerate response time, and autom
 ### Enterprise
 
 - Multi-workflow automation program
-- Cross-platform integrations (SIEM, SOAR, EDR, IAM, TI feeds)
+- Cross-platform integrations (SIEM, SOAR, EDR, IAM, email, TI feeds)
 - Advanced enrichment, analyst decision support, and containment options
 - Governance, metrics, and ongoing automation roadmap
 - Best for mature SOC teams optimizing scale and consistency

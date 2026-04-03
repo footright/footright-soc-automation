@@ -4,12 +4,12 @@ const scenarios = [
     name: "Suspicious Login",
     subtitle: "Impossible travel and brute force pattern",
     payload: {
-      source: "Microsoft Sentinel",
+      source: "Client SIEM or identity platform",
       alert: "Multiple failed logins followed by a successful login",
       user: "admin@company.com",
       ip: "185.220.101.44",
       location: "Unknown / impossible travel",
-      host: "AAD Sign-In"
+      host: "Identity login service"
     },
     output: {
       classification: "Suspicious",
@@ -19,10 +19,10 @@ const scenarios = [
       recommended_action: "Escalate to analyst, trigger MFA reset review, and isolate privileged sessions if confirmed."
     },
     steps: [
-      { title: "Alert Triggered", detail: "Sentinel detects repeated failed logins and unusual geolocation." },
-      { title: "Workflow Starts", detail: "Automation Rule sends normalized alert data to the AI Triage Engine." },
+      { title: "Alert Triggered", detail: "The client's existing alert source detects repeated failed logins and unusual geolocation." },
+      { title: "Workflow Starts", detail: "A connector, webhook, or automation rule sends normalized alert data to the AI Triage Engine." },
       { title: "AI Decision", detail: "The model evaluates context, assigns severity, and drafts recommended actions." },
-      { title: "SOAR Response", detail: "Swimlane opens a case, tags the alert, and routes it to the identity queue." }
+      { title: "Execution Response", detail: "The result is sent to the client's SOAR, ticketing system, or analyst queue." }
     ]
   },
   {
@@ -30,7 +30,7 @@ const scenarios = [
     name: "Phishing Email",
     subtitle: "Suspicious sender, URL extraction, domain blocking",
     payload: {
-      source: "Email Security Gateway",
+      source: "Client email security or SIEM workflow",
       alert: "User reported suspicious email with credential harvesting link",
       sender: "payroll-update@security-checks.co",
       url: "hxxps://m365-auth-check[.]com",
@@ -45,10 +45,10 @@ const scenarios = [
       recommended_action: "Quarantine message, block sender and domain, notify impacted user, and search for similar emails."
     },
     steps: [
-      { title: "Alert Ingested", detail: "The email alert arrives from the mail security stack or user report workflow." },
+      { title: "Alert Ingested", detail: "The email alert arrives from the client's mail security stack or user report workflow." },
       { title: "Indicators Extracted", detail: "URLs, sender, headers, and user context are gathered for enrichment." },
       { title: "AI Classification", detail: "The model scores maliciousness and explains the likely phishing pattern." },
-      { title: "Automated Action", detail: "Swimlane launches containment steps and documents the case for analyst review." }
+      { title: "Automated Action", detail: "The client's existing tools launch containment steps and document the case for analyst review." }
     ]
   },
   {
@@ -56,7 +56,7 @@ const scenarios = [
     name: "Endpoint Isolation",
     subtitle: "EDR-driven containment with analyst guardrails",
     payload: {
-      source: "EDR Platform",
+      source: "Client EDR platform",
       alert: "Suspicious PowerShell spawned from Office process",
       host: "FIN-LAPTOP-22",
       user: "jane.doe@company.com",
@@ -71,10 +71,10 @@ const scenarios = [
       recommended_action: "Isolate endpoint, preserve telemetry, notify IR lead, and validate user activity."
     },
     steps: [
-      { title: "EDR Detection", detail: "The endpoint tool flags suspicious execution behavior on a finance workstation." },
+      { title: "EDR Detection", detail: "The client's endpoint tool flags suspicious execution behavior on a finance workstation." },
       { title: "Context Enrichment", detail: "Host criticality, user role, and recent activity are added before triage." },
       { title: "AI Recommendation", detail: "The model identifies likely malicious tradecraft and raises containment urgency." },
-      { title: "Containment Path", detail: "The playbook isolates the endpoint and opens an incident for human validation." }
+      { title: "Containment Path", detail: "The playbook uses the client's existing response path to isolate the endpoint and open an incident for human validation." }
     ]
   }
 ];

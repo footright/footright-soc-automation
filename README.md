@@ -26,7 +26,7 @@ This repository packages Footright LLC's go-to-market and delivery starter kit f
 ## Structure
 
 - `offer/`: core service offer, pricing, and packaging
-- `demo/`: architecture and demo narratives for Sentinel and Swimlane
+- `demo/`: architecture, assessment templates, and platform-agnostic demo narratives
 - `sales/`: outreach, discovery, and closing assets for direct client selling
 - `case_study/`: sample proof narrative for proposals and sales calls
 - `playbooks/`: example SOC automation playbooks
@@ -36,10 +36,11 @@ This repository packages Footright LLC's go-to-market and delivery starter kit f
 
 1. Start with [soc_offer.md](C:\Users\moses\ai-soc-automation-agency\offer\soc_offer.md) to choose the right package for SMB, mid-market, or enterprise buyers.
 2. Open [index.html](C:\Users\moses\ai-soc-automation-agency\index.html) to run the clickable client demo locally in a browser.
-3. Use the demo files to walk prospects through architecture and workflow examples tied to their existing tools.
+3. Use [alert_triage_demo.md](C:\Users\moses\ai-soc-automation-agency\demo\alert_triage_demo.md), [playbook_automation_demo.md](C:\Users\moses\ai-soc-automation-agency\demo\playbook_automation_demo.md), and [architecture.md](C:\Users\moses\ai-soc-automation-agency\demo\architecture.md) to walk prospects through workflow examples tied to their existing tools.
 4. Customize the sales scripts for the target company, buyer role, and pain points.
 5. Adapt the sample playbooks to the customer's SIEM, SOAR, EDR, and email security stack.
 6. Reuse the triage agent prompt as a base prompt for OpenAI-driven alert classification and recommended actions.
+7. Start each client engagement with [environment_assessment.md](C:\Users\moses\ai-soc-automation-agency\demo\environment_assessment.md) and [tool_inventory_template.md](C:\Users\moses\ai-soc-automation-agency\demo\tool_inventory_template.md).
 
 ## Hosting
 
