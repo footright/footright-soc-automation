@@ -441,6 +441,12 @@ code {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.package-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
 .package-intro {
   margin-bottom: 20px;
 }
@@ -454,12 +460,56 @@ code {
 .package-card {
   border-radius: 28px;
   padding: 24px;
+  height: 100%;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.package-link:hover .package-card {
+  transform: translateY(-4px);
+  border-color: rgba(13, 107, 87, 0.28);
+}
+
+.package-link:hover .package-card.featured {
+  transform: translateY(-8px);
 }
 
 .package-card.featured {
   background: linear-gradient(180deg, rgba(215, 239, 232, 0.95), rgba(255, 248, 239, 0.98));
   border-color: rgba(13, 107, 87, 0.24);
   transform: translateY(-6px);
+}
+
+.package-cta {
+  margin: 18px 0 0;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.detail-page {
+  display: grid;
+  gap: 28px;
+}
+
+.detail-hero {
+  padding: 40px;
+}
+
+.detail-hero-featured {
+  background: linear-gradient(180deg, rgba(215, 239, 232, 0.95), rgba(255, 248, 239, 0.98));
+  border-color: rgba(13, 107, 87, 0.24);
+}
+
+.detail-page h1 {
+  margin: 0;
+  line-height: 1;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  max-width: 12ch;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .cta-panel {
@@ -499,6 +549,7 @@ code {
   .console-grid,
   .blueprint-grid,
   .package-grid,
+  .detail-grid,
   .cta-panel {
     grid-template-columns: 1fr;
   }
