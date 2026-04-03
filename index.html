@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footright AI SOC Automation Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <div class="brand-lockup">
+          <span class="brand-mark">F</span>
+          <div>
+            <p class="brand-name">Footright LLC</p>
+            <p class="brand-tag">AI-Powered Security Operations</p>
+          </div>
+        </div>
+        <h1>Show clients how your SOC automation solution triages, enriches, and responds in minutes.</h1>
+        <p class="hero-text">
+          Footright LLC helps enterprise and SMB buyers modernize security operations with Microsoft Sentinel, Swimlane, and AI-driven Tier 1 automation.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#demo">Launch Interactive Demo</a>
+          <a class="button secondary" href="#packages">View Packages</a>
+        </div>
+      </div>
+      <section class="hero-card">
+        <div class="metric">
+          <span class="metric-label">Alert Noise Reduction</span>
+          <strong>50-80%</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">MTTR Improvement</span>
+          <strong>40-70%</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Primary Buyer</span>
+          <strong>CISO / SecOps</strong>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section intro-grid">
+        <article class="panel">
+          <p class="section-label">What This Solves</p>
+          <h2>Operational pressure without more headcount.</h2>
+          <ul class="bullet-list">
+            <li>Too many alerts and not enough analysts</li>
+            <li>Inconsistent triage and slow escalation</li>
+            <li>Manual response steps across SIEM, EDR, email, and IAM</li>
+            <li>Lean teams that need automation now, not a year from now</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <p class="section-label">How It Works</p>
+          <h2>Sentinel alert in, enriched decision out.</h2>
+          <ol class="timeline">
+            <li>Microsoft Sentinel detects a suspicious login pattern.</li>
+            <li>Automation Rule or Logic App sends the alert to the AI Triage Engine.</li>
+            <li>The AI classifies severity, summarizes evidence, and recommends action.</li>
+            <li>Swimlane executes the playbook and routes the incident to the right analyst.</li>
+          </ol>
+        </article>
+      </section>
+
+      <section id="demo" class="section demo-section">
+        <div class="section-head">
+          <p class="section-label">Interactive Demo</p>
+          <h2>Walk a buyer through the alert lifecycle.</h2>
+        </div>
+
+        <div class="demo-layout">
+          <aside class="demo-controls panel">
+            <div class="control-head">
+              <h3>Choose a scenario</h3>
+              <p>Select an alert type to simulate the triage flow.</p>
+            </div>
+            <div class="scenario-list" id="scenarioList"></div>
+            <button class="button primary full" id="runDemoButton">Run Demo Flow</button>
+          </aside>
+
+          <section class="demo-console panel">
+            <div class="console-head">
+              <div>
+                <p class="section-label">Live Console</p>
+                <h3 id="scenarioTitle">Suspicious Login Alert</h3>
+              </div>
+              <span class="status-pill" id="scenarioStatus">Ready</span>
+            </div>
+
+            <div class="console-grid">
+              <div class="console-card">
+                <h4>Alert Payload</h4>
+                <pre id="alertPayload"></pre>
+              </div>
+              <div class="console-card">
+                <h4>AI Triage Output</h4>
+                <pre id="aiOutput"></pre>
+              </div>
+            </div>
+
+            <div class="stepper" id="stepper"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section architecture-section">
+        <div class="section-head">
+          <p class="section-label">Architecture</p>
+          <h2>Built for a fast buyer conversation.</h2>
+        </div>
+        <div class="architecture-flow">
+          <div class="arch-node">
+            <span>1</span>
+            <h3>Microsoft Sentinel</h3>
+            <p>Incident or alert source</p>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <span>2</span>
+            <h3>Logic App / Rule</h3>
+            <p>Workflow trigger and orchestration</p>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node accent">
+            <span>3</span>
+            <h3>AI Triage Engine</h3>
+            <p>Classification, enrichment, severity, next action</p>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <span>4</span>
+            <h3>Swimlane SOAR</h3>
+            <p>Playbook execution and analyst routing</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="packages" class="section package-section">
+        <div class="section-head">
+          <p class="section-label">Commercial Packaging</p>
+          <h2>Sell one solution in three client-ready tiers.</h2>
+        </div>
+        <div class="package-grid">
+          <article class="package-card">
+            <p class="package-name">SMB Launch</p>
+            <h3>$4K-$6K/mo</h3>
+            <ul class="bullet-list compact">
+              <li>1 to 2 workflows</li>
+              <li>One primary stack integration</li>
+              <li>Monthly tuning</li>
+              <li>Best for lean teams</li>
+            </ul>
+          </article>
+          <article class="package-card featured">
+            <p class="package-name">Growth</p>
+            <h3>$7.5K-$10K/mo</h3>
+            <ul class="bullet-list compact">
+              <li>2 to 4 workflows</li>
+              <li>SIEM plus EDR or email integration</li>
+              <li>Weekly optimization</li>
+              <li>Best default package</li>
+            </ul>
+          </article>
+          <article class="package-card">
+            <p class="package-name">Enterprise</p>
+            <h3>$12K-$20K+/mo</h3>
+            <ul class="bullet-list compact">
+              <li>Multi-platform automation</li>
+              <li>Advanced enrichment and governance</li>
+              <li>Cross-team workflows</li>
+              <li>Best for mature SOCs</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cta-section">
+        <div class="panel cta-panel">
+          <div>
+            <p class="section-label">Footright Sales Use</p>
+            <h2>Open this page during discovery or a 15-minute Footright demo call.</h2>
+            <p>
+              Walk the buyer through one scenario, tie it to their bottleneck, and map them to the right package.
+            </p>
+          </div>
+          <a class="button primary" href="sales/ciso_outreach.md">Open Sales Assets</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Footright LLC | AI SOC Automation | Client demo environment</p>
+      <p><a href="https://4ootright.com/">4ootright.com</a> | <a href="mailto:footright@4ootright.com">footright@4ootright.com</a> | <a href="https://calendly.com/footright/30min">Book a demo</a></p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

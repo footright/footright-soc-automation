@@ -1,0 +1,17 @@
+name: Alert Triage Automation
+
+trigger:
+  source: SIEM
+
+steps:
+  - extract_indicators
+  - enrich_with_threat_intel
+  - send_to_ai_model
+  - classify_alert
+  - assign_severity
+  - route_to_queue
+
+outputs:
+  - classification
+  - severity
+  - recommended_action

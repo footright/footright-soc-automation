@@ -1,0 +1,18 @@
+name: Endpoint Isolation Automation
+
+trigger:
+  source: EDR
+
+steps:
+  - validate_endpoint_alert
+  - enrich_host_context
+  - send_to_ai_model
+  - determine_containment_action
+  - isolate_endpoint
+  - open_incident
+  - notify_it_and_security
+
+outputs:
+  - isolation_status
+  - incident_id
+  - recommended_follow_up

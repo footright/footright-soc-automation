@@ -1,0 +1,18 @@
+name: Phishing Response Automation
+
+trigger:
+  source: Email Security Gateway
+
+steps:
+  - extract_sender_and_urls
+  - detonate_or_reputation_check
+  - send_to_ai_model
+  - classify_email
+  - quarantine_message
+  - block_indicators
+  - notify_user_and_soc
+
+outputs:
+  - disposition
+  - blocked_indicators
+  - user_notification_status
