@@ -142,10 +142,56 @@
         </div>
       </section>
 
+      <section class="section blueprint-section">
+        <div class="section-head">
+          <p class="section-label">Implementation Blueprint</p>
+          <h2>Plan the first deployment before expanding automation.</h2>
+        </div>
+        <div class="blueprint-grid">
+          <article class="panel blueprint-card">
+            <p class="package-name">Connector Strategy</p>
+            <h3>Integrate into the current stack first.</h3>
+            <p>
+              Prioritize the connectors needed for the first high-volume workflow, keep ingestion and action layers separate, and avoid forcing platform replacement.
+            </p>
+            <a class="text-link" href="https://github.com/footright/footright-soc-automation/blob/main/connectors_strategy.md">View connector strategy</a>
+          </article>
+          <article class="panel blueprint-card">
+            <p class="package-name">Readiness Checklist</p>
+            <h3>Validate access, controls, and workflow scope.</h3>
+            <p>
+              Confirm APIs, permissions, alert fields, approval points, and test paths before production build work starts.
+            </p>
+            <a class="text-link" href="https://github.com/footright/footright-soc-automation/blob/main/integration_readiness_checklist.md">Open readiness checklist</a>
+          </article>
+          <article class="panel blueprint-card">
+            <p class="package-name">Minimum Viable Model</p>
+            <h3>Ship one complete workflow end to end.</h3>
+            <p>
+              Start with one alert source, one normalized event model, one triage decision, one operational output, and one human control point.
+            </p>
+            <a class="text-link" href="https://github.com/footright/footright-soc-automation/blob/main/minimum_viable_integration_model.md">Review the model</a>
+          </article>
+          <article class="panel blueprint-card">
+            <p class="package-name">Agent Workflow Design</p>
+            <h3>Keep triage logic auditable and controlled.</h3>
+            <p>
+              Structure the flow from intake through enrichment, agent triage, policy checks, routing, and analyst feedback.
+            </p>
+            <a class="text-link" href="https://github.com/footright/footright-soc-automation/blob/main/agent_workflow_design.md">Read workflow design</a>
+          </article>
+        </div>
+      </section>
+
       <section id="packages" class="section package-section">
         <div class="section-head">
           <p class="section-label">Commercial Packaging</p>
           <h2>Choose the right engagement for your security team.</h2>
+        </div>
+        <div class="panel package-intro">
+          <p>
+            Every package is built around the same delivery motion: assess the current environment, launch one production-worthy workflow quickly, then expand connectors and response depth in controlled phases.
+          </p>
         </div>
         <div class="package-grid">
           <article class="package-card">
@@ -154,6 +200,7 @@
             <ul class="bullet-list compact">
               <li>1 to 2 workflows</li>
               <li>One primary stack integration</li>
+              <li>Human-approved response actions</li>
               <li>Monthly tuning</li>
               <li>Best for lean teams</li>
             </ul>
@@ -164,6 +211,7 @@
             <ul class="bullet-list compact">
               <li>2 to 4 workflows</li>
               <li>SIEM plus EDR or email integration</li>
+              <li>Guided response and analyst feedback loops</li>
               <li>Weekly optimization</li>
               <li>Best default package</li>
             </ul>
@@ -174,6 +222,7 @@
             <ul class="bullet-list compact">
               <li>Multi-platform automation</li>
               <li>Advanced enrichment and governance</li>
+              <li>Controlled containment and approval paths</li>
               <li>Cross-team workflows</li>
               <li>Best for mature SOCs</li>
             </ul>

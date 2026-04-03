@@ -208,7 +208,8 @@ code {
 
 .intro-grid,
 .demo-layout,
-.package-grid {
+.package-grid,
+.blueprint-grid {
   display: grid;
   gap: 20px;
 }
@@ -236,6 +237,7 @@ code {
 
 .demo-section .section-head,
 .architecture-section .section-head,
+.blueprint-section .section-head,
 .package-section .section-head {
   margin-bottom: 18px;
 }
@@ -257,8 +259,32 @@ code {
 .cta-panel p,
 .console-head p,
 .arch-node p,
-.package-card li {
+.package-card li,
+.blueprint-card p {
   color: var(--muted);
+}
+
+.blueprint-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.blueprint-card {
+  display: grid;
+  gap: 10px;
+}
+
+.blueprint-card h3 {
+  margin: 0;
+}
+
+.text-link {
+  color: var(--accent-strong);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
 }
 
 .scenario-list {
@@ -415,6 +441,16 @@ code {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.package-intro {
+  margin-bottom: 20px;
+}
+
+.package-intro p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .package-card {
   border-radius: 28px;
   padding: 24px;
@@ -461,6 +497,7 @@ code {
   .intro-grid,
   .demo-layout,
   .console-grid,
+  .blueprint-grid,
   .package-grid,
   .cta-panel {
     grid-template-columns: 1fr;
